@@ -1,0 +1,34 @@
+import React from "react";
+import { useTasks } from '../context/TaskContext'
+import {Link} from 'react-router-dom';
+
+
+const TaskCard = ({task}) => {
+    const {deleteTask} = useTasks(); 
+  return (
+    <div className="bg-zinc-800 max-w-md w-full p-10 rounded-md">
+        <header className="flex justify-between w-full">
+        <h1 className="text-2xl font-bold">{task.title}</h1>
+      <div className="flex gap-x-2 items-center ">
+
+        <button  className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md" onClick={()=>{deleteTask(task._id) 
+       }}> Delete</button>
+
+        <button> <Link className="bg-blue-500 hover:bg-blue-600 text-white- px-4 py-2 rounded-md" to={`/tasks/${task._id}`}> Edit </Link></button>
+      </div>
+        </header>
+      <p className="text-slate-300">{task.description}</p>
+      <p>
+        {task.date &&
+          new Date(task.date).toLocaleDateString("en-US", {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
+      </p>
+    </div>
+  );
+};
+
+export default TaskCard;

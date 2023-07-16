@@ -1,0 +1,11 @@
+.task-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajusta el ancho mínimo y máximo según tus necesidades */
+    gap: 2rem; /* Espacio entre las tarjetas */
+  }
+  
+  .task-card {
+    width: 100%; /* Ancho de la tarjeta */
+    /* Otros estilos necesarios para que el contenido dentro de la tarjeta se ajuste correctamente */
+  }
+  
