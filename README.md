@@ -4,7 +4,7 @@ npm i
 
 //En terminal 
 - FRONT cd client
--npm run dev
+- npm run dev
 
 
 -  SERVER npm run dev
