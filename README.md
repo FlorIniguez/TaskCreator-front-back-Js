@@ -2,10 +2,10 @@
 Para iniciar 
 npm i
 
-//En una terminal 
-cd client
+//En terminal 
+- FRONT cd client
 npm run dev
-(para levantar front)
-//En otra terminal
-npm run dev
-(para levantar servidor)
+
+
+-  SERVER npm run dev
+
